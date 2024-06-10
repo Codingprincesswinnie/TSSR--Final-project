@@ -1,0 +1,52 @@
+ /* table css */
+.custom-table {
+  border-collapse: collapse;
+  width: 125%; /* Make the table take the full width */
+  margin-right: 10%;
+  margin-left: -12%;
+}
+.custom-table th,
+.custom-table td {
+  border: 1px solid #caa8a8;
+  background-color: #DB3E12;
+  padding: 10px;
+  font-size: 23px;
+}
+.custom-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #F4891D;
+  color: rgb(6, 6, 6);
+}
+
+.title {
+  text-align: center; /* Center the text */
+  margin-top: 28px; /* Add some margin at the top */
+  margin-bottom: 25px;
+}
+
+ /* form css */
+ .btn-color {
+  background-color: #DB3E12;
+  color: #fff;
+}
+
+.profile-image-pic {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.cardbody-color {
+  background-color: #F4891D;
+   
+ }
+
+a {
+  text-decoration: underline;
+}
+
+ 
+  
+

@@ -1,0 +1,35 @@
+.custom-table {
+  border-collapse: collapse;
+  width: 125%; /* Make the table take the full width */
+  margin-right: 10%;
+  margin-left: -12%;
+}
+.custom-table th,
+.custom-table td {
+  border: 1px solid #caa8a8;
+  background-color: #d2d2d2;
+  padding: 10px;
+  font-size: 23px;
+}
+.custom-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #212921;
+  color: white;
+}
+
+.title {
+  text-align: center; /* Center the text */
+  margin-top: 28px; /* Add some margin at the top */
+  margin-bottom: 25px;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px; /* Adds space between buttons */
+}
+
+.button-container .btn {
+  flex: 1; /* Ensures buttons are flexible and take up equal space */
+}

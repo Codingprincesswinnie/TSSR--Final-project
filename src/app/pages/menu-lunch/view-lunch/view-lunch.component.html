@@ -1,0 +1,52 @@
+<div class="container">
+  <h1>View Lunch Item Information</h1>
+  <!-- id, item_name, description, category, price, img -->
+  <div class="card p-4" *ngIf="menu_lunch">
+    <p class="mt-6">
+      <span class="w-50 d-incline-block"><strong> </strong></span>
+      ID: {{ menu_lunch["id"] }}
+    </p>
+    <hr />
+    <p class="mt-6">
+      <span class="w-50 d-incline-block"><strong>Item Name:</strong></span>
+      {{ menu_lunch["item_name"] }}
+    </p>
+
+    <hr />
+    <p class="mt-6">
+      <span class="w-50 d-incline-block"><strong>Description:</strong></span>
+      {{ menu_lunch["description"] }}
+    </p>
+    <hr />
+    <p class="mt-6">
+      <span class="w-50 d-incline-block"><strong>Category:</strong></span>
+      {{ menu_lunch["category"] }}
+    </p>
+    <p class="mt-6">
+      <span class="w-50 d-incline-block"><strong>Price:</strong></span>
+      {{ menu_lunch["price"] | currency  }}
+    </p>
+    <hr />
+    <p class="mt-6 text-center">
+      <span class="w-50 d-inline-block"
+        ><strong>Image of Food Item</strong></span
+      >
+      <br />
+      <img
+        src="{{ menu_lunch['img'] }}"
+        class="centered-image"
+        alt="Food Item"
+      />
+    </p>
+
+    <br>
+  <a routerLink="/edit-lunch/{{ menu_lunch['id'] }}" class="btn btn-info mx-2"
+    >Edit</a
+  >
+</div>
+<br>
+<a routerLink="/menu-lunch" class="btn btn-info mx-2"
+>Back</a
+>
+
+</div>

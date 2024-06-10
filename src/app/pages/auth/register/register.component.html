@@ -1,0 +1,71 @@
+<div
+  class="container"
+  style="background-color: #f4891d; padding: 20px; border-radius: 5px"
+>
+  <h2 class="text-center">Register with Us to Make a Reservation</h2>
+  <div class="text-center">
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrOizixVlxjok1G3bTYH-idsLdUtC98jb4rg&s"
+      class="img-fluid profile-image-pic img-thumbnail square my-5"
+      width="300px"
+      alt="Resturant Logo"
+    />
+  </div>
+
+  <form #registerForm="ngForm" (ngSubmit)="signUp(registerForm)">
+    <p class="mt-2 pt-1 text-danger" *ngIf="hasError">{{ errorMessage }}</p>
+    <div class="form-group">
+      <label for="first_name">First Name:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="first_nam"
+        name="first_nam"
+        placeholder="Enter First Name"
+        ngModel
+      />
+    </div>
+    <div class="form-group">
+      <label for="last_nam">Last Name:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="last_nam"
+        name="last_nam"
+        placeholder="Enter Last Name"
+        ngModel
+      />
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        placeholder="Enter Email"
+        ngModel
+      />
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        name="password"
+        placeholder="Enter Password Here"
+        ngModel
+      />
+    </div>
+    <div class="form-group">
+      <label for="role">Role:</label>
+      <select class="form-control" id="role" name="role">
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+        <option value="guest">Guest</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

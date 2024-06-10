@@ -1,0 +1,141 @@
+<div class="bg d-flex align-items-center justify-content-center">
+  <div class="form-container text-center">
+    <h1>Make Reservation Now</h1>
+    <h5>Come Dine With Us</h5>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+ 
+          <div class="card my-5">
+            <div class="card-body cardbody-color p-lg-5">
+              <div class="text-center">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrOizixVlxjok1G3bTYH-idsLdUtC98jb4rg&s"
+                  class="img-fluid profile-image-pic img-thumbnail square my-5"
+                  width="300px"
+                  alt="Resturant Logo"
+                />
+              </div>
+
+              <form #newReservation="ngForm" (ngSubmit)="addNewReservation(newReservation)"  >
+                <!-- <p class="mt-2 pt-1 text-danger" *ngIf="hasError">{{ errMsg }}</p> -->
+                <label class="form-lable" for="user_id">Username</label>
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    id="user_id"
+                    name="user_id"
+                    class="form-control"
+                      
+                  />
+                </div>
+
+                <label class="form-lable" for="reservation_date">Reservation Date</label>
+                <div class="mb-3">
+                  <input
+                    type="date"
+                    id="reservation_date"
+                    name="reservation_date"
+                    class="form-control"
+                     ngModel
+                  />
+                </div>
+                <div class="mb-4">
+                  <label class="form-lable" for="reservation_time">Reservation Time</label>
+                  <input
+                    type="time"
+                    id="reservation_time"
+                    name="reservation_time"
+                    class="form-control"
+                    ngModel
+                  />
+                </div>
+                <div class="mb-5">
+                  <label class="form-lable" for="guest_count"> Amount of Guess</label>
+                  <input
+                    type="number"
+                    id="guest_count"
+                    name="guest_count"
+                    class="form-control"
+                    ngModel
+                  />
+                </div>
+
+                <div class="text-center">
+                  <!-- <button
+                    type="submit"
+                    class="btn btn-color px-5 mb-5 w-100"
+                    style="font-size: 1.5rem"
+                  >
+                    Add Rservation
+                  </button> -->
+                        <button type="submit" class="btn btn-orange">Save Lunch Item</button>
+                </div>
+                
+                <div
+                  id="emailHelp"
+                  class="form-text text-center mb-5 text-dark"
+                  style="font-size: 1.5rem"
+                >
+                  Not Registered?
+                  <a
+                    href="/sign-up"
+                    class="text-dark fw-bold"
+                    style="font-size: 1.5rem"
+                  >
+                    Create an Account</a
+                  >
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="container">
+      <h1 class="title">ALL Reservation Information in Database</h1>
+
+      <table class="table table-hover custom-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>User id/ Users Name</th>
+            <th>Reservation Date</th>
+            <th>Reservation Time</th>
+            <th>Amount of Guest</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let reservations of reservations">
+            <td>{{ reservations["Reservation_ID"] }}</td>
+            <td>
+              {{ reservations["First_Name"] }} {{ reservations["Last_Name"] }}
+            </td>
+            <td>
+              {{ reservations["Reservation_Date"] | date : "dd-MM-yyyy"  }}
+            </td>
+            <td>{{ reservations["Reservation_Time"] }}</td>
+            <td>{{ reservations["Amount_of_Guest"] }}</td>
+            <td>
+              <div class="d-flex align-item-center">
+                <button
+                  type="button"
+                  (click)="toDelete(reservations['id'])"
+                  class="btn btn-danger mx-2"
+                >
+                  Delete
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- </div> -->

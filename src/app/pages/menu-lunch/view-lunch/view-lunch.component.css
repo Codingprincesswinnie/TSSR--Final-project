@@ -1,0 +1,26 @@
+.container{
+      margin-bottom: 10%;
+      margin-top: 10%;
+    }
+
+    body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #aa4141;
+        }
+        h1 {
+             background-color: #ffeb3b;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            text-align: center;
+        }
+
+        .w-50 {
+            font-size: 25px; /* Adjust the size as needed */
+        }

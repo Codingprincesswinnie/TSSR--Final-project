@@ -1,0 +1,67 @@
+<br />
+<br />
+<br />
+<!-- Hero Image Section -->
+
+<div class="welcom-message">
+  <h1>Welcome Administrator</h1>
+</div>
+ 
+<!-- <div *ngIf="isAdmin"> -->
+<div class="button-container">
+  <a routerLink="/new-lunch" class="btn btn-primary">Add Lunch Item</a>
+  <a routerLink="/new-menu-beverage" class="btn btn-primary">Add Beverage Item</a>
+ </div>
+
+
+<hr />
+
+<div class="container">
+  <h1 class="title">ALL Lunch item in database</h1>
+
+  <table class="table table-hover custom-table">
+    <thead>
+      <tr>
+        <!-- id, item_name, description, category, price, img -->
+        <th>ID</th>
+        <th>Item Name</th>
+        <th>Description</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let menu_lunch of menu_lunch">
+        <td>{{ menu_lunch["id"] }}</td>
+        <td>{{ menu_lunch["item_name"] }}</td>
+        <td>{{ menu_lunch["description"] }}</td>
+        <td>{{ menu_lunch["category"] }}</td>
+        <td>{{ menu_lunch["price"] | currency }}</td>
+        <td>
+          <div class="d-flex align-item-center">
+            <a
+              routerLink="/view-lunch/{{ menu_lunch['id'] }}"
+              class="btn btn-info mx-2"
+              >View</a
+            >
+            <a
+              routerLink="/edit-lunch/{{ menu_lunch['id'] }}"
+              class="btn btn-info mx-2"
+              >Edit</a
+            >
+            <button
+              type="button"
+              (click)="toDelete(menu_lunch['id'])"
+              class="btn btn-danger mx-2"
+            >
+              Delete
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+ 

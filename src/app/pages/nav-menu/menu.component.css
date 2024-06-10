@@ -1,0 +1,115 @@
+/* Container */
+.container {
+  margin-top: 50px;
+}
+
+/* Title */
+.text-center {
+  color: #333;
+  /* font-family: 'Arial', sans-serif; */
+}
+
+/* Subtitle */
+h5[style="text-align: center;"] {
+  /* font-family: 'Arial', sans-serif; */
+  color: #666;
+}
+
+/* Cards */
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 15px;
+  margin-bottom: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Card Images */
+.card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  /* max-height: 0px; */
+  object-fit: cover;
+}
+
+/* Card Body */
+.card-body {
+  /* padding: 10px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Card Title */
+.card-title {
+  /* font-family: 'Arial', sans-serif; */
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Card Text */
+.card-text {
+  /* font-family: 'Arial', sans-serif; */
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.card-text i {
+  margin-right: 5px;
+}
+
+/* Custom Image Class */
+.custom-img {
+  max-height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .col.d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px #F4891D;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+  margin: 15px;  /* Added margin for space between cards */
+}
+
+/* resurvation button */
+/* Style for the button */
+.btn-primary {
+    
+    font-size: 20px; /* Increase font size */
+    border-radius: 8px; /* Add border radius for rounded corners */
+    background-color: #F4891D; /* Change background color */
+    color: #fff; /* Change text color */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make it a block element */
+    transition: all 0.3s ease; /* Smooth transition */
+    padding: 30px;
+    padding-top: 10%;
+}
+
+/* Hover effect */
+.btn-primary:hover {
+    background-color: #DB3E12;  
+}

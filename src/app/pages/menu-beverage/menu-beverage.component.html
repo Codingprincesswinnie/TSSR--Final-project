@@ -1,0 +1,64 @@
+<h1>Welcome to the Beverage Menu</h1> 
+ 
+ 
+ important links
+<br />
+<a routerLink="/new-menu-beverage">Add beverage Item</a>
+<br />
+<a routerLink="/all-menu-beverage">View All beverage Items</a>
+
+ <div class="container">
+  <h1 class="title">ALL Beverage item in database</h1>
+
+  <table class="table table-hover custom-table">
+    <thead>
+      <tr>
+        <!-- id, item_name, description, category, price, img -->
+        <th>ID</th>
+        <th>Item Name</th>
+        <th>Description</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let menu_beverage of menu_beverage">
+        <td>{{ menu_beverage["id"] }}</td>
+        <td>{{ menu_beverage["item_name"] }}</td>
+        <td>{{ menu_beverage["description"] }}</td>
+        <td>{{ menu_beverage["category"] }}</td>
+        <td>{{ menu_beverage["price"] | currency }}</td>
+        <td>
+          <div class="d-flex align-item-center">
+            <a
+              routerLink="/view-beverage/{{ menu_beverage['id'] }}"
+              class="btn btn-info mx-2"
+              >View</a
+            >
+            <a
+              routerLink="/edit-beverage/{{ menu_beverage['id'] }}"
+              class="btn btn-info mx-2"
+              >Edit</a
+            >
+            <button
+              type="button"
+              (click)="toDelete(menu_beverage['id'])"
+              class="btn btn-danger mx-2"
+            >
+              Delete
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+ 
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

@@ -1,0 +1,32 @@
+.container {
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+.btn-orange {
+  background-color: orange;
+  border-color: orange;
+  color: white;
+}
+
+.btn-orange:hover {
+  background-color: darkorange;
+  border-color: darkorange;
+}
+
+h1 {
+  background-color: #ffeb3b;
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.center-buttons {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  margin: 0 10px; /* Optional: Add some space between buttons */
+}

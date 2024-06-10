@@ -1,0 +1,81 @@
+<div class="container">
+  <h1>Edit Lunch Item</h1>
+
+  <!-- id, item_name, description, category, price, img -->
+  <div class="p-4 bg-light rounded">
+    <form #editLunchForm="ngForm" (ngSubmit)="editLunch(editLunchForm)">
+      <div class="mb-3">
+        <label for="item_name" class="form-label">Item Name</label>
+        <input
+          type="text"
+          class="form-control"
+          name="item_name"
+          id="item_name"
+          ngModel="{{ menu_lunch?.item_name }}"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <input
+          type="text"
+          class="form-control"
+          name="description"
+          id="description"
+          ngModel="{{ menu_lunch?.description }}"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="category" class="form-label">Category</label>
+        <select
+          class="form-control"
+          name="category"
+          id="category"
+          ngModel="{{ menu_lunch?.category }}"
+          required
+        >
+          <option value="LUNCH">Lunch</option>
+          <option value="DINNER">Dinner</option>
+          <option value="BEVERAGE">Beverage</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input
+          type="text"
+          class="form-control"
+          name="price"
+          id="price"
+          ngModel="{{ menu_lunch?.price }}"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="img" class="form-label">Image</label>
+        <input
+          type="text"
+          class="form-control"
+          name="img"
+          id="img"
+          ngModel="{{ menu_lunch?.img }}"
+          required
+        />
+      </div>
+
+      <button type="submit" class="btn btn-orange">Save Lunch Item</button>
+    </form>
+  </div>
+</div>
+
+<!-- navigations -->
+<div class="center-buttons">
+  <a routerLink="/menu-lunch" class="btn btn-primary mb-3"
+    >Lunch Item from Database</a
+  >
+  <a routerLink="/" class="btn btn-primary mb-3">Home</a>
+</div>
